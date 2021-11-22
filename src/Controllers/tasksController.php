@@ -4,27 +4,35 @@ namespace MVC\Controllers;
 
 use MVC\Core\Controller;
 use MVC\Models\Task;
+use MVC\Models\TaskRepository;
 
-class tasksController extends Controller
+class TasksController extends Controller
 {
+    private $taskRepository;
+
+    public function __construct()
+    {
+        $this->taskRepository = new TaskRepository();
+    }
+
     function index()
     {
         $tasks = new Task();
 
-        $d['tasks'] = $tasks->showAllTasks();
+        $d['tasks'] = $this->taskRepository->getAll();
         $this->set($d);
         $this->render("index");
     }
 
     function create()
     {
-        if (isset($_POST["title"]))
-        {
+        if (isset($_POST["title"])) {
+            $task = new Task();
+            $task->title = $_POST['title'];
+            $task->description = $_POST['description'];
+            $task->created_at = date('Y-m-d H:i:s');
 
-            $task= new Task();
-
-            if ($task->create($_POST["title"], $_POST["description"]))
-            {
+            if ($this->taskRepository->add($task)) {
                 header("Location: " . WEBROOT . "tasks/index");
             }
         }
@@ -34,14 +42,17 @@ class tasksController extends Controller
 
     function edit($id)
     {
-        $task= new Task();
+        $task = new Task();
 
-        $d["task"] = $task->showTask($id);
+        $d["task"] = $this->taskRepository->get($id);
 
-        if (isset($_POST["title"]))
-        {
-            if ($task->edit($id, $_POST["title"], $_POST["description"]))
-            {
+        if (isset($_POST["title"])) {
+            $task->title = $_POST['title'];
+            $task->description = $_POST['description'];
+            $task->updated_at = date('Y-m-d H:i:s');
+            $task->id = $id;
+
+            if ($this->taskRepository->add($task)) {
                 header("Location: " . WEBROOT . "tasks/index");
             }
         }
@@ -52,10 +63,10 @@ class tasksController extends Controller
     function delete($id)
     {
         $task = new Task();
-        if ($task->delete($id))
-        {
+        if ($this->taskRepository->delete($id)) {
             header("Location: " . WEBROOT . "tasks/index");
         }
     }
 }
+
 ?>

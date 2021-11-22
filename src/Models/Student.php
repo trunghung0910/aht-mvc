@@ -5,10 +5,11 @@ namespace MVC\Models;
 use MVC\Core\Model;
 use MVC\Config\Database;
 
-class Task extends Model
+class Student extends Model
 {
-    protected $title;
-    protected $description;
+    protected $name;
+    protected $birthdate;
+    protected $sex;
     protected $id;
     protected $created_at;
     protected $updated_at;

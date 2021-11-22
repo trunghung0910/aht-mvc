@@ -18,16 +18,13 @@ class Controller
         ob_start();
         $foldername = str_replace('Controllers', '', get_class($this));
         $foldername = str_replace('Controller', '', $foldername);
-        $foldername = ucfirst(str_replace('MVC\\\\', '',$foldername));
+        $foldername = ucfirst(str_replace('MVC\\\\', '', $foldername));
         require(ROOT . "Views/" . $foldername . '/' . $filename . '.php');
         $content_for_layout = ob_get_clean();
 
-        if ($this->layout == false)
-        {
+        if ($this->layout == false) {
             $content_for_layout;
-        }
-        else
-        {
+        } else {
             require(ROOT . "Views/Layouts/" . $this->layout . '.php');
         }
     }
@@ -42,11 +39,11 @@ class Controller
 
     protected function secure_form($form)
     {
-        foreach ($form as $key => $value)
-        {
+        foreach ($form as $key => $value) {
             $form[$key] = $this->secure_input($value);
         }
     }
 
 }
+
 ?>
