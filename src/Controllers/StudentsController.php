@@ -17,8 +17,6 @@ class StudentsController extends Controller
 
     function index()
     {
-        $students = new Student();
-
         $d['students'] = $this->studentRepository->getAll();
         $this->set($d);
         $this->render("index");
@@ -43,11 +41,10 @@ class StudentsController extends Controller
 
     function edit($id)
     {
-        $student = new Student();
-
         $d["student"] = $this->studentRepository->get($id);
 
         if (isset($_POST["name"])) {
+            $student = new Student();
             $student->name = $_POST['name'];
             $student->birthdate = $_POST['birthdate'];
             $student->sex = $_POST['sex'];
@@ -64,7 +61,6 @@ class StudentsController extends Controller
 
     function delete($id)
     {
-        $student = new Student();
         if ($this->studentRepository->delete($id)) {
             header("Location: " . WEBROOT . "students/index");
         }

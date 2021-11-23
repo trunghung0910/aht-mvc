@@ -17,8 +17,6 @@ class TasksController extends Controller
 
     function index()
     {
-        $tasks = new Task();
-
         $d['tasks'] = $this->taskRepository->getAll();
         $this->set($d);
         $this->render("index");
@@ -37,16 +35,16 @@ class TasksController extends Controller
             }
         }
 
-        $this->render("create");
+        $this->render("create", 'defaults');
     }
 
     function edit($id)
     {
-        $task = new Task();
-
         $d["task"] = $this->taskRepository->get($id);
 
         if (isset($_POST["title"])) {
+            $task = new Task();
+
             $task->title = $_POST['title'];
             $task->description = $_POST['description'];
             $task->updated_at = date('Y-m-d H:i:s');
@@ -62,7 +60,6 @@ class TasksController extends Controller
 
     function delete($id)
     {
-        $task = new Task();
         if ($this->taskRepository->delete($id)) {
             header("Location: " . WEBROOT . "tasks/index");
         }

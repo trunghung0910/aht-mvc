@@ -11,6 +11,7 @@
     <style>
         body {
             padding-top: 5rem;
+            background-color: grey;
         }
 
         .starter-template {

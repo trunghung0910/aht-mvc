@@ -24,7 +24,7 @@ class ResourceModel implements ResourceModelInterface
         try {
             $arrayModel = $model->getProperties();
 
-            $id = $arrayModel['id'];
+            $id = $arrayModel[$this->id];
 
             $StringModel = "";
             foreach ($arrayModel as $key => $value) {

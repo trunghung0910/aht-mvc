@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c93ac342-66cb-49f3-8d9a-59a21e512379" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controllers/StudentsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Student.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/StudentRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/StudentResourceModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Students/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Students/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Views/Layouts/defaults.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webroot/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Webroot/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/tasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/tasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/StudentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/tasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/TasksController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Tasks/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Tasks/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Tasks/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Tasks/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/dispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/ResourceModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ResourceModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,13 +189,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webmanga" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Views/Layouts" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\mvc\src\Views\Layouts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\mvc\src" />
     </key>
@@ -236,6 +228,7 @@
       <workItem from="1637227164072" duration="473000" />
       <workItem from="1637559845671" duration="15679000" />
       <workItem from="1637576505946" duration="606000" />
+      <workItem from="1637634657235" duration="4101000" />
     </task>
     <servers />
   </component>

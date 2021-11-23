@@ -12,8 +12,9 @@ class Controller
         $this->vars = array_merge($this->vars, $d);
     }
 
-    function render($filename)
+    function render($filename , $layout = 'default')
     {
+        $this->layout = $layout;
         extract($this->vars);
         ob_start();
         $foldername = str_replace('Controllers', '', get_class($this));
